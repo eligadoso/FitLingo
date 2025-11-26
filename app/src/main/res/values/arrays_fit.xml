@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="workout_types">
+    <item>Correr</item>
+    <item>Bicicleta</item>
+    <item>Gimnasio</item>
+    <item>Caminata</item>
+  </string-array>
+  <string-array name="intensities">
+    <item>Baja</item>
+    <item>Media</item>
+    <item>Alta</item>
+  </string-array>
+  <string-array name="goal_types">
+    <item>Sesiones por semana</item>
+    <item>Minutos por semana</item>
+    <item>Kilómetros por mes</item>
+  </string-array>
+</resources>

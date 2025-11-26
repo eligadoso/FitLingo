@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_background">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/partial_header"/>
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="@dimen/space_4">
+      <TextView style="@style/FitApp.Text.H2" android:text="@string/profile_title"/>
+
+      <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/color_surface" android:padding="@dimen/space_4" android:layout_marginTop="@dimen/space_4">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+          <FrameLayout android:layout_width="64dp" android:layout_height="64dp" android:background="@drawable/bg_button_primary">
+            <TextView android:id="@+id/profile_avatar_initial" android:layout_width="match_parent" android:layout_height="match_parent" android:textColor="@color/color_white" android:textSize="@dimen/text_xl" android:gravity="center"/>
+          </FrameLayout>
+          <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginLeft="@dimen/space_4">
+            <TextView android:id="@+id/profile_name" android:textSize="@dimen/text_lg" android:textColor="@color/color_text"/>
+            <TextView android:id="@+id/profile_email" android:textSize="@dimen/text_sm" android:textColor="@color/color_text_light"/>
+          </LinearLayout>
+          <Button android:id="@+id/btn_edit_profile" style="@style/FitApp.Button.Secondary" android:text="Editar" android:onClick="onEditProfile"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/profile_fields" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_4">
+          <EditText android:id="@+id/input_age" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Edad" android:visibility="gone"/>
+          <EditText android:id="@+id/input_weight" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Peso (kg)" android:visibility="gone"/>
+          <EditText android:id="@+id/input_height" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Altura (cm)" android:visibility="gone"/>
+          <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3">
+            <Button android:id="@+id/btn_cancel_profile" style="@style/FitApp.Button.Secondary" android:text="Cancelar" android:onClick="onCancelProfile"/>
+            <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btn_save_profile" style="@style/FitApp.Button.Primary" android:text="Guardar" android:onClick="onSaveProfile"/>
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+
+      <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/color_surface" android:padding="@dimen/space_4" android:layout_marginTop="@dimen/space_4">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+          <TextView style="@style/FitApp.Text.H3" android:text="Mis Objetivos"/>
+          <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+          <Button android:id="@+id/btn_toggle_goal_form" style="@style/FitApp.Button.Secondary" android:text="Nuevo" android:onClick="onToggleGoalForm"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/goal_form" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone" android:layout_marginTop="@dimen/space_3">
+          <Spinner android:id="@+id/input_goal_type" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+          <EditText android:id="@+id/input_goal_target" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Meta" android:inputType="number" android:layout_marginTop="@dimen/space_2"/>
+          <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3">
+            <Button android:id="@+id/btn_cancel_goal" style="@style/FitApp.Button.Secondary" android:text="Cancelar" android:onClick="onCancelGoal"/>
+            <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btn_add_goal" style="@style/FitApp.Button.Primary" android:text="Agregar" android:onClick="onAddGoal"/>
+          </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/list_goals" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3"/>
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+</ScrollView>

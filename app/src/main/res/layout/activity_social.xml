@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="@color/color_background">
+
+  <include layout="@layout/partial_header"/>
+
+  <TextView style="@style/FitApp.Text.H2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_title" android:layout_margin="@dimen/space_4"/>
+
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingLeft="@dimen/space_4" android:paddingRight="@dimen/space_4">
+    <EditText android:id="@+id/input_friend_email" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Correo de amigo" android:tooltipText="Ej: usuario@dominio.com"/>
+    <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_add_friend" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Agregar"/>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingLeft="@dimen/space_4" android:paddingRight="@dimen/space_4" android:layout_marginTop="@dimen/space_2">
+    <EditText android:id="@+id/input_friend_name" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Nombre de amigo" android:tooltipText="Ej: Ana Pérez"/>
+    <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_add_friend_name" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Agregar por nombre"/>
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingLeft="@dimen/space_4" android:paddingRight="@dimen/space_4" android:layout_marginTop="@dimen/space_2">
+    <CheckBox android:id="@+id/cb_friends_only" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ver solo amigos"/>
+  </LinearLayout>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/list_friends"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/space_4"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/list_posts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_4"/>
+
+</LinearLayout>

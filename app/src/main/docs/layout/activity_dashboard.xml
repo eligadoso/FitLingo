@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="@color/color_background">
+
+  <include layout="@layout/partial_header"/>
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="@dimen/space_4">
+
+      <TextView style="@style/FitApp.Text.H2" android:text="@string/dashboard_title"/>
+      <TextView style="@style/FitApp.Text.Small" android:text="@string/dashboard_subtitle"/>
+
+      <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:useDefaultMargins="true"
+        android:layout_marginTop="@dimen/space_6">
+
+        <LinearLayout style="@style/FitApp.Card" android:orientation="vertical">
+          <TextView android:id="@+id/stat_total_workouts" android:textSize="@dimen/text_2xl" android:textColor="@color/color_text"/>
+          <TextView android:text="Total entrenamientos" style="@style/FitApp.Text.Small"/>
+        </LinearLayout>
+        <LinearLayout style="@style/FitApp.Card" android:orientation="vertical">
+          <TextView android:id="@+id/stat_total_minutes" android:textSize="@dimen/text_2xl" android:textColor="@color/color_text"/>
+          <TextView android:text="Minutos totales" style="@style/FitApp.Text.Small"/>
+        </LinearLayout>
+        <LinearLayout style="@style/FitApp.Card" android:orientation="vertical">
+          <TextView android:id="@+id/stat_total_distance" android:textSize="@dimen/text_2xl" android:textColor="@color/color_text"/>
+          <TextView android:text="Kilómetros totales" style="@style/FitApp.Text.Small"/>
+        </LinearLayout>
+        <LinearLayout style="@style/FitApp.Card" android:orientation="vertical">
+          <TextView android:id="@+id/stat_this_week" android:textSize="@dimen/text_2xl" android:textColor="@color/color_text"/>
+          <TextView android:text="Esta semana" style="@style/FitApp.Text.Small"/>
+        </LinearLayout>
+        <LinearLayout style="@style/FitApp.Card" android:orientation="vertical">
+          <TextView android:id="@+id/stat_avg_per_week" android:textSize="@dimen/text_2xl" android:textColor="@color/color_text"/>
+          <TextView android:text="Promedio semanal" style="@style/FitApp.Text.Small"/>
+        </LinearLayout>
+        <LinearLayout style="@style/FitApp.Card" android:orientation="vertical">
+          <TextView android:id="@+id/stat_achievements_count" android:textSize="@dimen/text_2xl" android:textColor="@color/color_text"/>
+          <TextView android:text="Logros desbloqueados" style="@style/FitApp.Text.Small"/>
+        </LinearLayout>
+      </GridLayout>
+
+      <LinearLayout
+        android:id="@+id/goals_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/space_6"
+        android:background="@color/color_surface"
+        android:padding="@dimen/space_4">
+        <TextView style="@style/FitApp.Text.H3" android:text="Objetivos Actuales"/>
+        <LinearLayout android:id="@+id/goals_list" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+      </LinearLayout>
+
+      <FrameLayout
+        android:id="@+id/chart_weekly_activity"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="@dimen/space_6"
+        android:background="@color/color_surface"/>
+
+      <FrameLayout
+        android:id="@+id/chart_activity_types"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="@dimen/space_4"
+        android:background="@color/color_surface"/>
+
+    </LinearLayout>
+  </ScrollView>
+
+</LinearLayout>

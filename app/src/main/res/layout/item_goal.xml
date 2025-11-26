@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="@color/color_surface"
+  android:padding="@dimen/space_3">
+
+  <TextView android:id="@+id/goal_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/color_text" android:textSize="@dimen/text_base"/>
+  <ProgressBar android:id="@+id/goal_progress" style="@android:style/Widget.ProgressBar.Horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:progress="0" android:max="100"/>
+  <TextView android:id="@+id/goal_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/color_text_light" android:textSize="@dimen/text_sm"/>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="FitApp.Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textColor">@color/color_text</item>
+    <item name="android:colorBackground">@color/color_background</item>
+  </style>
+
+  <style name="FitApp.Text.H1">
+    <item name="android:textSize">@dimen/text_3xl</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/color_text</item>
+  </style>
+  <style name="FitApp.Text.H2">
+    <item name="android:textSize">@dimen/text_2xl</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/color_text</item>
+  </style>
+  <style name="FitApp.Text.H3">
+    <item name="android:textSize">@dimen/text_xl</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/color_text</item>
+  </style>
+  <style name="FitApp.Text.Body">
+    <item name="android:textSize">@dimen/text_base</item>
+    <item name="android:textColor">@color/color_text</item>
+  </style>
+  <style name="FitApp.Text.Small">
+    <item name="android:textSize">@dimen/text_sm</item>
+    <item name="android:textColor">@color/color_text_light</item>
+  </style>
+
+  <style name="FitApp.Card">
+    <item name="android:background">@color/color_surface</item>
+    <item name="android:padding">@dimen/space_4</item>
+  </style>
+
+  <style name="FitApp.Button.Primary">
+    <item name="android:textColor">@color/color_white</item>
+    <item name="android:background">@drawable/bg_button_primary</item>
+    <item name="android:paddingLeft">@dimen/space_4</item>
+    <item name="android:paddingRight">@dimen/space_4</item>
+    <item name="android:paddingTop">@dimen/space_2</item>
+    <item name="android:paddingBottom">@dimen/space_2</item>
+  </style>
+
+  <style name="FitApp.Button.Secondary">
+    <item name="android:textColor">@color/color_text</item>
+    <item name="android:background">@drawable/bg_chip</item>
+    <item name="android:paddingLeft">@dimen/space_3</item>
+    <item name="android:paddingRight">@dimen/space_3</item>
+    <item name="android:paddingTop">@dimen/space_2</item>
+    <item name="android:paddingBottom">@dimen/space_2</item>
+  </style>
+</resources>

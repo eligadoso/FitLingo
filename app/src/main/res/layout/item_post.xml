@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="@color/color_surface"
+  android:padding="@dimen/space_4">
+
+  <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="40dp" android:layout_height="40dp" android:background="@drawable/bg_button_primary">
+      <TextView android:id="@+id/post_avatar_initial" android:layout_width="match_parent" android:layout_height="match_parent" android:textColor="@color/color_white" android:textSize="@dimen/text_base" android:gravity="center"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/space_3">
+      <TextView android:id="@+id/post_user_name" android:textSize="@dimen/text_base" android:textColor="@color/color_text"/>
+      <TextView android:id="@+id/post_created_at" android:textSize="@dimen/text_xs" android:textColor="@color/color_text_light"/>
+    </LinearLayout>
+  </LinearLayout>
+
+  <TextView android:id="@+id/post_content" android:textSize="@dimen/text_base" android:textColor="@color/color_text" android:layout_marginTop="@dimen/space_3"/>
+
+  <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3">
+    <Button android:id="@+id/btn_like" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Me gusta" android:onClick="onLikePost"/>
+    <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_comments" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Comentarios" android:onClick="onToggleComments"/>
+  </LinearLayout>
+
+  <LinearLayout android:id="@+id/comments_section" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_3" android:visibility="gone">
+    <LinearLayout android:id="@+id/comments_list" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2">
+      <EditText android:id="@+id/input_comment" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="Escribe un comentario..."/>
+      <Button android:id="@+id/btn_send_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Primary" android:text="Enviar" android:onClick="onSendComment"/>
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

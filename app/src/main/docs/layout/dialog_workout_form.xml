@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="#80000000">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/color_surface"
+    android:padding="@dimen/space_6">
+
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+      <TextView android:id="@+id/workout_form_title" style="@style/FitApp.Text.H3" android:text="Nuevo Entrenamiento"/>
+      <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+      <Button android:id="@+id/btn_close_workout_form" style="@style/FitApp.Button.Secondary" android:text="Cerrar" android:onClick="onCloseWorkoutForm"/>
+    </LinearLayout>
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_4">
+      <Spinner android:id="@+id/input_type" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+      <EditText android:id="@+id/input_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fecha" android:layout_marginTop="@dimen/space_2"/>
+      <EditText android:id="@+id/input_duration" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Duración (minutos)" android:inputType="number" android:layout_marginTop="@dimen/space_2"/>
+      <EditText android:id="@+id/input_distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Distancia (km)" android:inputType="numberDecimal" android:layout_marginTop="@dimen/space_2"/>
+      <Spinner android:id="@+id/input_intensity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2"/>
+      <EditText android:id="@+id/input_location" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ubicación" android:layout_marginTop="@dimen/space_2"/>
+      <EditText android:id="@+id/input_notes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Notas" android:layout_marginTop="@dimen/space_2"/>
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_4">
+      <Button android:id="@+id/btn_cancel_workout" style="@style/FitApp.Button.Secondary" android:text="Cancelar" android:onClick="onCancelWorkout"/>
+      <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
+      <Button android:id="@+id/btn_save_workout" style="@style/FitApp.Button.Primary" android:text="Guardar" android:onClick="onSaveWorkout"/>
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

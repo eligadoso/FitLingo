@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="@color/color_background">
+
+  <include layout="@layout/partial_header"/>
+
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="@dimen/space_4">
+    <TextView android:id="@+id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_lg" android:textColor="@color/color_text"/>
+    <TextView android:id="@+id/user_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="@dimen/text_sm" android:textColor="@color/color_text_light"/>
+  </LinearLayout>
+
+  <TextView style="@style/FitApp.Text.H3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logros" android:layout_marginLeft="@dimen/space_4"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/list_user_achievements"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/space_4"/>
+
+</LinearLayout>
