@@ -20,6 +20,6 @@ pluginManagement {
     }
   }
 
-rootProject.name = "FitApp"
+rootProject.name = "FitLingo"
 include(":app")
  

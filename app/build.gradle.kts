@@ -1,13 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.services)
 }
 
 android {
-    namespace = "com.example.fitapp"
+    namespace = "com.example.fitlingo"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.fitapp"
+        applicationId = "com.example.fitlingo"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -31,10 +32,7 @@ android {
     }
 }
 
-// Apply Google Services plugin only if configuration file is present
-if (file("google-services.json").exists()) {
-    apply(plugin = "com.google.gms.google-services")
-}
+// El plugin de Google Services se aplica mediante el bloque plugins anterior
 
 dependencies {
 

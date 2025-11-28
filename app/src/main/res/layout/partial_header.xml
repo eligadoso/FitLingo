@@ -20,18 +20,11 @@
       android:layout_weight="1"
       android:orientation="horizontal">
 
-      <FrameLayout
+      <ImageView
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:background="@drawable/bg_button_primary">
-        <TextView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:text="F"
-          android:textSize="@dimen/text_lg"
-          android:textColor="@color/color_white"
-          android:gravity="center"/>
-      </FrameLayout>
+        android:src="@mipmap/fitlingo"
+        android:contentDescription="@string/app_name"/>
 
       <TextView
         android:layout_width="wrap_content"

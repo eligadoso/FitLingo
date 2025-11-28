@@ -3,7 +3,8 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical"
-  android:background="#80000000">
+  android:background="#80000000"
+  android:gravity="center">
 
   <LinearLayout
     android:layout_width="match_parent"
@@ -18,22 +19,24 @@
       <Button android:id="@+id/btn_close_workout_form" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Cerrar" android:onClick="onCloseWorkoutForm"/>
     </LinearLayout>
 
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_4">
-      <Spinner android:id="@+id/input_type" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Selecciona el tipo de actividad (correr, bici, gimnasio)"/>
-      <EditText android:id="@+id/input_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fecha" android:focusable="false" android:clickable="true" android:tooltipText="Formato: DD/MM/YYYY" android:layout_marginTop="@dimen/space_2"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Elige la fecha del entrenamiento"/>
-      <EditText android:id="@+id/input_duration" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Duración (minutos)" android:inputType="number" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: 45"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Tiempo total de la sesión en minutos"/>
-      <EditText android:id="@+id/input_distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Distancia (km)" android:inputType="numberDecimal" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: 5.2"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Kilómetros recorridos (si aplica)"/>
-      <Spinner android:id="@+id/input_intensity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Intensidad percibida de la sesión"/>
-      <EditText android:id="@+id/input_location" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ubicación" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: Parque Central"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Lugar aproximado del entrenamiento"/>
-      <EditText android:id="@+id/input_notes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Notas" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: Ritmo cómodo"/>
-      <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Observaciones adicionales (sensaciones, clima, etc.)"/>
-    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_4">
+      <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Spinner android:id="@+id/input_type" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Selecciona el tipo de actividad (correr, bici, gimnasio)"/>
+        <EditText android:id="@+id/input_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Fecha" android:focusable="false" android:clickable="true" android:tooltipText="Formato: DD/MM/YYYY" android:layout_marginTop="@dimen/space_2"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Elige la fecha del entrenamiento"/>
+        <EditText android:id="@+id/input_duration" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Duración (minutos)" android:inputType="number" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: 45"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Tiempo total de la sesión en minutos"/>
+        <EditText android:id="@+id/input_distance" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Distancia (km)" android:inputType="numberDecimal" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: 5.2"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Kilómetros recorridos (si aplica)"/>
+        <Spinner android:id="@+id/input_intensity" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_2"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Intensidad percibida de la sesión"/>
+        <EditText android:id="@+id/input_location" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Ubicación" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: Parque Central"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Lugar aproximado del entrenamiento"/>
+        <EditText android:id="@+id/input_notes" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Notas" android:layout_marginTop="@dimen/space_2" android:tooltipText="Ej: Ritmo cómodo"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/FitApp.Text.Small" android:text="Observaciones adicionales (sensaciones, clima, etc.)"/>
+      </LinearLayout>
+    </ScrollView>
 
     <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/space_4">
       <Button android:id="@+id/btn_cancel_workout" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Cancelar" android:onClick="onCancelWorkout"/>
