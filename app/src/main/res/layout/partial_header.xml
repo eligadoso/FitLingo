@@ -57,34 +57,88 @@
           android:textSize="@dimen/text_xs"
           android:textColor="@color/color_text_light"/>
       </LinearLayout>
-      <Button
+      <ImageButton
         android:id="@+id/btn_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+          android:src="@drawable/logout"
         android:onClick="onLogoutClick"
         style="@style/FitApp.Button.Secondary"
-        android:text="Salir"/>
+          android:contentDescription="Salir"/>
     </LinearLayout>
   </LinearLayout>
 
   <HorizontalScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/space_3"
-    android:paddingRight="@dimen/space_3">
+      android:layout_width="match_parent"
+      android:layout_height="58dp"
+      android:paddingLeft="@dimen/space_3"
+      android:paddingRight="@dimen/space_3">
+
     <LinearLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal">
-      <Button android:id="@+id/nav_dashboard" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Dashboard" android:onClick="onNavDashboard"/>
-      <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
-      <Button android:id="@+id/nav_workouts" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Entrenamientos" android:onClick="onNavWorkouts"/>
-      <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
-      <Button android:id="@+id/nav_achievements" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Logros" android:onClick="onNavAchievements"/>
-      <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
-      <Button android:id="@+id/nav_social" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Social" android:onClick="onNavSocial"/>
-      <Space android:layout_width="@dimen/space_2" android:layout_height="wrap_content"/>
-      <Button android:id="@+id/nav_profile" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/FitApp.Button.Secondary" android:text="Perfil" android:onClick="onNavProfile"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <ImageButton
+          android:id="@+id/nav_dashboard"
+          style="@style/FitApp.Button.Secondary"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:contentDescription="Dashboard"
+          android:onClick="onNavDashboard"
+          android:src="@drawable/dashboard" />
+
+      <Space
+          android:layout_width="@dimen/space_2"
+          android:layout_height="wrap_content" />
+
+      <ImageButton
+          android:id="@+id/nav_workouts"
+          style="@style/FitApp.Button.Secondary"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:contentDescription="Entrenamientos"
+          android:onClick="onNavWorkouts"
+          android:src="@drawable/workouts" />
+
+      <Space
+          android:layout_width="@dimen/space_2"
+          android:layout_height="wrap_content" />
+
+      <ImageButton
+          android:id="@+id/nav_achievements"
+          style="@style/FitApp.Button.Secondary"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:contentDescription="Logros"
+          android:onClick="onNavAchievements"
+          android:src="@drawable/achievements" />
+
+      <Space
+          android:layout_width="@dimen/space_2"
+          android:layout_height="wrap_content" />
+
+      <ImageButton
+          android:id="@+id/nav_social"
+          style="@style/FitApp.Button.Secondary"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:contentDescription="Social"
+          android:onClick="onNavSocial"
+          android:src="@drawable/social" />
+
+      <Space
+          android:layout_width="@dimen/space_2"
+          android:layout_height="wrap_content" />
+
+      <ImageButton
+          android:id="@+id/nav_profile"
+          style="@style/FitApp.Button.Secondary"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:contentDescription="Perfil"
+          android:onClick="onNavProfile"
+          android:src="@drawable/profile" />
     </LinearLayout>
   </HorizontalScrollView>
 
